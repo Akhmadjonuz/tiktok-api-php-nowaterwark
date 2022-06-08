@@ -21,7 +21,9 @@ $live_video = json_decode($video, true);
 mkdir("tiktok");
 
 $links = [];
+
 $ex = explode('href="', $live_video['html']);
+
 $result = explode('" name="download"', $ex[1]);
 array_push($links, $result[0]);
 file_put_contents('tiktok/' . $id . '.mp4', file_get_contents($result[0]));
