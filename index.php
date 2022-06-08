@@ -15,7 +15,7 @@
 # telegram: @Akhmadjon
 
 $url = $_GET["url"];
-$id = $_GET['id'];
+$id = $_GET["id"];
 $video = file_get_contents("https://tikdown.org/getAjax?url=" . urlencode($url) . "&_token=t4JdZ9etWtvCbI68c77THtVyYJEtEp4DrGg2Af8W");
 $live_video = json_decode($video, true);
 mkdir("tiktok");
